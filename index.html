@@ -117,6 +117,16 @@
             margin-bottom: 15px;
             color: #2c3e50;
         }
+
+	.feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature:hover::after {
+            opacity: 1;
+        }
+
         
         /* 链接指示器 */
         .link-indicator {
@@ -133,7 +143,11 @@
         .card:hover .link-indicator {
             opacity: 1;
         }
-        
+
+        .feature:hover .link-indicator {
+            opacity: 1;
+        }
+
         /* 装饰元素 */
         .decorative-circle {
             position: fixed;
