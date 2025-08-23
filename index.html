@@ -1,16 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Github Page demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World 页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            font-size: 1.8rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .divider {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            margin: 30px auto;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            p {
+                font-size: 1.4rem;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="main-content">
-
+    <div class="container">
+        <h1>hello world</h1>
+        <div class="divider"></div>
+        <p>hello world</p>
     </div>
 </body>
 </html>
