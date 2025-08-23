@@ -52,11 +52,18 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             padding: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
         
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card:hover::after {
+            opacity: 1;
         }
         
         .card-title {
@@ -65,12 +72,16 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #3498db;
+            position: relative;
+            z-index: 2;
         }
         
         .card-content {
             font-size: 1.1rem;
             color: #555;
             line-height: 1.7;
+            position: relative;
+            z-index: 2;
         }
         
         .full-width {
@@ -97,12 +108,30 @@
             padding: 20px;
             background: #f8f9fa;
             border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
         
         .feature-icon {
             font-size: 2.5rem;
             margin-bottom: 15px;
             color: #2c3e50;
+        }
+        
+        /* 链接指示器 */
+        .link-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #3498db;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+        
+        .card:hover .link-indicator {
+            opacity: 1;
         }
         
         /* 装饰元素 */
@@ -171,10 +200,11 @@
     <div class="main-content">
         <!-- 欢迎卡片 -->
         <div class="card">
+
             <h2 class="card-title">欢迎</h2>
             <div class="card-content">
                 <p>欢迎来到这个又重新设计的页面，这次我更新了一些内容。（虽然还是不知道怎么加图片）</p>
-		<p>版本：v1.2</p>
+                <p>版本：v1.2</p>
             </div>
         </div>
         
@@ -210,7 +240,7 @@
                         <h3>程序设计实现</h3>
                         <p>包揽各种语言，python，C++，cs</p>
                     </div>
-                    <div class="feature">
+                    <div class="feature" onclick="window.open('https://huh114514.github.io/Studio-Pages/', '_blank')">
                         <div class="feature-icon">Coldbox</div>
                         <h3>前沿探索</h3>
                         <p>其实是强迫人工神经网络模型帮他们做事（meiyou）</p>
@@ -229,13 +259,14 @@
         </div>
         
         <!-- 额外内容卡片 -->
-        <div class="card">
+        <div class="card" onclick="window.open('https://huh114514.github.io/Studio-Pages/', '_blank')">
+            <span class="link-indicator">↗</span>
             <h2 class="card-title">设计理念</h2>
             <div class="card-content">
                 <p>不用说了，设寄理念就是一切基于AI！</p>
             </div>
         </div>
     </div>
-    
+
     </body>
 </html>
