@@ -1,4 +1,4 @@
-# Coldbox-Internet-Pages-Hub Home
+# Yumou-Pages
 
 一个利用github pages的个人网站
 
