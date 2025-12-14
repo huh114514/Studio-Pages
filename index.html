@@ -4,33 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>羽某-主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 左上角标题 -->
-    <h1 class="corner-title">羽某的个人主页</h1>
-    
-    <!-- 主内容区域 -->
-    <div class="main-content">
-        <!-- 欢迎卡片 -->
-        <div class="card">
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <!-- 居左的元素 -->
+                <div class="navbar-left">
+                    <a href="#" class="logo">
+                        <i class="fas fa-code"></i>
+                        <span>羽某-主页</span>
+                    </a>
+                </div>
+                
+                <!-- 居右的元素 -->
+                <div class="navbar-right">
+                    <ul class="nav-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="#projects"><i class="fas fa-project-diagram"></i> 项目</a></li>
+                        
+                        <li><a href="mailto:961894250@qq.com"><i class="fas fa-envelope"></i> 联系</a></li>
+                    </ul>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-            <h2 class="card-title">欢迎</h2>
-            <div class="card-content">
-                <p>这是一个个人主页</p>
-                <p> </p>
+    <div class="container">
+        <!-- 个人信息和项目容器 -->
+        <div class="profile-container">
+            <!-- 个人信息侧边栏 -->
+            <aside class="profile-sidebar">
+                <img src="https://img95.699pic.com/xsj/0v/nf/8f.jpg!/fw/700/watermark/url/L3hzai93YXRlcl9kZXRhaWwyLnBuZw/align/southeast" 
+                     alt="开发者头像" class="profile-avatar">
+                
+                <h1 class="profile-name">羽某</h1>
+                <p class="profile-title">开发者</p>
+                
+                <p class="profile-bio">
+                    会熟练使用ai开发
+                </p>
+                
+                <div class="profile-social">
+                    <a href="https://github.com/huh114514" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://codeberg.com/wengmou114514" target="_blank" title="Codeberg"><i class="fab fa-code"></i></a>
+                </div>
+                
+                <div class="profile-skills">
+                    <h3>技术栈</h3>
+                    <div class="skills-list">
+                        <a href="https://chat.deepseek.com" target="_blank" class="skill-tag">deepseek</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 项目展示区域 -->
+            <section class="projects-section" id="projects">
+                <h2 class="projects-title"><i class="fas fa-project-diagram"></i> 项目列表</h2>
+                
+                <div class="projects-grid">
+                    <!-- 项目1 -->
+                    <div class="project-card" onclick="window.open('https://github.com/zhangming/task-manager', '_blank')">
+                        <div class="project-header">
+                            <h3 class="project-title">LocalIm</h3>
+                            <span class="project-status">进行中</span>
+                        </div>
+                        <p class="project-description">
+                            去中心化的局域网聊天软件
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://codeberg.org/wengmou114514/localim" target="_blank" class="project-link">
+                                <i class="fab fa-code"></i> 查看代码（Codeberg）
+                            </a>
+                            
+                            <a href="https://github.io/can't download" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> 下载
+                            </a>
+                        </div>
+                    </div>
+
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/huh114514" target="_blank">GitHub</a>
+                <a href="https://codeberg.org/huh114514" target="_blank">Codeberg</a>
+                <a href="mailto:961894250@qq.com">联系</a>
             </div>
+            <p>© 2025 羽某. 保留所有权利.</p>
+            <p>本网站采用 <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a> 开源许可证</p>
         </div>
-        
-        <!-- 内容卡片 -->
-        <div class="card" onclick="window.open('https://huh114514.github.io/Yumou-Pages/calc.html', '_blank')">
-            <span class="link-indicator">点击前往↗</span>
-            <h2 class="card-title">简易计算器</h2>
-            <div class="card-content">
-                <p>简易计算器</p>
-            </div>
-        </div>
-    </div>
-    
-    </body>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
